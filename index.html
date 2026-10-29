@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Doope · Imita a tus amigos y no rompas la cadena</title>
+  <meta name="description" content="Doope es el juego diario de fotos para grupos de amigos: cada día, un reto. Imita la foto del anterior y descubre cómo se deforma la cadena.">
+  <meta property="og:title" content="Doope · Imita a tus amigos y no rompas la cadena">
+  <meta property="og:description" content="El juego diario de fotos para grupos de amigos.">
+  <meta property="og:image" content="https://doopeapp.com/img/playa.jpg">
+  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0a0a0a" media="(prefers-color-scheme: dark)">
+  <link rel="icon" href="img/logo-doope-negro.png">
+  <link rel="preload" href="fonts/Inter_800ExtraBold.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="saltar" href="#principal">Saltar al contenido</a>
+
+  <header class="barra">
+    <div class="contenedor barra-interior">
+      <a href="#inicio" class="barra-logo" aria-label="Doope, inicio">
+        <img class="logo-claro" src="img/logo-doope-negro.png" alt="Doope" width="102" height="30">
+        <img class="logo-oscuro" src="img/logo-doope-blanco.png" alt="" width="102" height="30" aria-hidden="true">
+      </a>
+      <nav aria-label="Principal" class="barra-enlaces">
+        <a href="#como-funciona">Cómo funciona</a>
+        <a href="#app">La app</a>
+        <a href="#privacidad">Privacidad</a>
+      </nav>
+      <span class="etiqueta">Próximamente en Google Play</span>
+    </div>
+  </header>
+
+  <main id="principal">
+    <!-- Portada -->
+    <section class="hero" id="inicio">
+      <div class="contenedor hero-interior">
+        <div class="hero-texto">
+          <h1>Imita a tus amigos y <span class="verde">no rompas la cadena</span></h1>
+          <p class="lead">Un reto de foto al día para tu grupo. Una persona hace una foto, la siguiente la imita, y así hasta el final. Entonces se revelan todas.</p>
+          <div class="hero-acciones">
+            <button type="button" class="boton" data-compartir>
+              <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 15V3M7 8l5-5 5 5"/><path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7"/></svg>
+              <span data-compartir-texto>Pásaselo a tu grupo</span>
+            </button>
+            <a class="enlace-flecha" href="#como-funciona">Cómo funciona
+              <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+          </div>
+          <p class="aviso-estado" role="status" aria-live="polite" data-compartir-aviso></p>
+        </div>
+
+        <div class="hero-visual">
+          <div class="movil">
+            <img src="img/pantalla-5.jpg" alt="Pantalla de cámara de Doope: cuenta atrás de tu turno, la foto de tu amigo para imitar y tu cámara" width="640" height="1368" fetchpriority="high">
+          </div>
+          <ol class="cadena" aria-label="Ejemplo de cadena: tres fotos saltando, una tras otra">
+            <li>
+              <img src="img/playa.jpg" alt="Chica saltando en la playa al atardecer" width="360" height="360">
+            </li>
+            <li class="eslabon" aria-hidden="true">
+              <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.5.5l3-3a5 5 0 0 0-7-7l-1.7 1.7"/><path d="M14 11a5 5 0 0 0-7.5-.5l-3 3a5 5 0 0 0 7 7l1.7-1.7"/></svg>
+            </li>
+            <li>
+              <img src="img/calle.jpg" alt="Chico saltando en una calle soleada" width="360" height="360">
+            </li>
+            <li class="eslabon" aria-hidden="true">
+              <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.5.5l3-3a5 5 0 0 0-7-7l-1.7 1.7"/><path d="M14 11a5 5 0 0 0-7.5-.5l-3 3a5 5 0 0 0 7 7l1.7-1.7"/></svg>
+            </li>
+            <li>
+              <img src="img/perro.jpg" alt="Perro golden retriever saltando en un parque" width="360" height="360">
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- Cómo funciona -->
+    <section class="seccion" id="como-funciona">
+      <div class="contenedor">
+        <h2>Tres pasos y a reírse</h2>
+
+        <ol class="pasos">
+          <li class="paso">
+            <span class="paso-num" aria-hidden="true">1</span>
+            <h3>Llega el aviso</h3>
+            <p>Una vez al día, a una hora que nadie conoce. Alguien elegido al azar abre la ronda con una foto libre.</p>
+          </li>
+          <li class="paso">
+            <span class="paso-num" aria-hidden="true">2</span>
+            <h3>Imita la foto anterior</h3>
+            <p>Solo ves la foto del jugador anterior y tienes 30 minutos para recrearla. Lo demás, secreto.</p>
+          </li>
+          <li class="paso">
+            <span class="paso-num" aria-hidden="true">3</span>
+            <h3>Se revela la cadena</h3>
+            <p>Cuando todos han jugado, se ven todas las fotos a la vez. Comenta y mira cómo se fue deformando.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Momento de marca -->
+    <section class="turno" aria-labelledby="turno-titulo">
+      <div class="contenedor turno-interior">
+        <p class="turno-barra" aria-hidden="true">
+          <span>¡ES TU TURNO!</span>
+          <span class="turno-reloj" data-reloj>29:15</span>
+        </p>
+        <h2 id="turno-titulo">Una foto. Treinta minutos. Cero trampas.</h2>
+      </div>
+    </section>
+
+    <!-- La app -->
+    <section class="seccion" id="app">
+      <div class="contenedor">
+        <h2>Pensada para jugar con tus amigos de verdad</h2>
+
+        <div class="tira" role="region" aria-label="Pantallas de la app" tabindex="0">
+          <figure class="pantalla">
+            <div class="movil"><img src="img/pantalla-3.jpg" alt="Foto de la ronda a pantalla completa con un comentario de un amigo" width="640" height="1368" loading="lazy"></div>
+            <figcaption>
+              <strong>Revela, comenta y comparte</strong>
+              Cada foto tiene su hilo de comentarios y puedes compartir tu favorita.
+            </figcaption>
+          </figure>
+          <figure class="pantalla">
+            <div class="movil"><img src="img/pantalla-6.jpg" alt="Lista de comunidades de Doope con sus miembros" width="640" height="1368" loading="lazy"></div>
+            <figcaption>
+              <strong>Tus comunidades, tus reglas</strong>
+              Grupos solo con tus amigos. No hay grupos públicos y solo el administrador añade gente.
+            </figcaption>
+          </figure>
+          <figure class="pantalla">
+            <div class="movil"><img src="img/pantalla-4.jpg" alt="Pantalla Memories con las rondas pasadas de la comunidad" width="640" height="1368" loading="lazy"></div>
+            <figcaption>
+              <strong>Memories</strong>
+              Todas las rondas pasadas, a un toque.
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- Privacidad -->
+    <section class="seccion seccion-gris" id="privacidad">
+      <div class="contenedor privacidad">
+        <h2>Tus fotos son solo para tu gente</h2>
+        <dl class="privacidad-lista">
+          <div>
+            <dt>Fotos privadas</dt>
+            <dd>Solo las ven los miembros de tu comunidad. Nada es público.</dd>
+          </div>
+          <div>
+            <dt>Ubicación opcional</dt>
+            <dd>Si quieres, añades la ciudad a tu foto. Nunca tu ubicación exacta.</dd>
+          </div>
+          <div>
+            <dt>Tú mandas</dt>
+            <dd>Bloquea, denuncia y borra tu cuenta cuando quieras, desde la propia app.</dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- Cierre -->
+    <section class="cta">
+      <div class="contenedor cta-interior">
+        <h2>Ve juntando a tu grupo</h2>
+        <p>Doope llegará muy pronto a Google Play. Avisa ya a tus amigos para que la primera cadena sea larga.</p>
+        <button type="button" class="boton boton-claro" data-compartir>
+          <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 15V3M7 8l5-5 5 5"/><path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7"/></svg>
+          <span data-compartir-texto>Pásaselo a tu grupo</span>
+        </button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="pie">
+    <div class="contenedor pie-interior">
+      <img class="logo-claro" src="img/logo-doope-negro.png" alt="Doope" width="82" height="24">
+      <img class="logo-oscuro" src="img/logo-doope-blanco.png" alt="" width="82" height="24" aria-hidden="true">
+      <nav aria-label="Legal" class="pie-enlaces">
+        <a href="https://legal.doopeapp.com/privacidad.html">Política de privacidad</a>
+        <a href="https://legal.doopeapp.com/terminos.html">Términos de uso</a>
+        <a href="https://legal.doopeapp.com/borrar-cuenta.html">Borrar mi cuenta</a>
+        <a href="mailto:m.741.app@gmail.com">Contacto</a>
+      </nav>
+      <p class="pie-nota">Doope es para mayores de 16 años. © 2026 m741</p>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      // «Pásaselo a tu grupo»: abre el menú de compartir del móvil o copia el enlace.
+      var botones = document.querySelectorAll('[data-compartir]');
+      var aviso = document.querySelector('[data-compartir-aviso]');
+      var datos = {
+        title: 'Doope',
+        text: 'Doope: el juego diario de fotos para grupos de amigos. Imita la foto del anterior.',
+        url: window.location.origin + '/'
+      };
+      function mostrar(texto) {
+        aviso.textContent = texto;
+        botones.forEach(function (b) {
+          var t = b.querySelector('[data-compartir-texto]');
+          t.textContent = texto;
+          setTimeout(function () { t.textContent = 'Pásaselo a tu grupo'; aviso.textContent = ''; }, 2500);
+        });
+      }
+      botones.forEach(function (b) {
+        b.addEventListener('click', function () {
+          if (navigator.share) {
+            navigator.share(datos).catch(function () {});
+          } else if (navigator.clipboard) {
+            navigator.clipboard.writeText(datos.url).then(
+              function () { mostrar('¡Enlace copiado!'); },
+              function () { mostrar('No se pudo copiar el enlace'); }
+            );
+          } else {
+            mostrar('Copia la dirección de la barra del navegador');
+          }
+        });
+      });
+
+      // Cuenta atrás de la barra «¡ES TU TURNO!»: es el único movimiento de la página.
+      var reloj = document.querySelector('[data-reloj]');
+      if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        var segundos = 29 * 60 + 15;
+        setInterval(function () {
+          segundos = segundos > 0 ? segundos - 1 : 30 * 60 - 1;
+          var m = Math.floor(segundos / 60), s = segundos % 60;
+          reloj.textContent = m + ':' + (s < 10 ? '0' : '') + s;
+        }, 1000);
+      }
+    })();
+  </script>
+</body>
+</html>
