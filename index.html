@@ -28,9 +28,13 @@
   </header>
 
   <main id="principal">
-    <!-- Portada -->
-    <section class="hero" id="inicio">
-      <div class="contenedor hero-interior">
+    <!-- Portada con vídeo -->
+    <section class="portada" id="inicio">
+      <video class="portada-video" autoplay muted loop playsinline preload="auto" poster="video/fondo-poster.jpg" aria-hidden="true" tabindex="-1">
+        <source src="video/fondo.mp4" type="video/mp4">
+      </video>
+      <div class="portada-capa" aria-hidden="true"></div>
+      <div class="contenedor portada-interior">
         <div class="hero-texto">
           <h1>Imita a tus amigos y <span class="verde">no rompas la cadena</span></h1>
           <div class="hero-acciones">
@@ -44,7 +48,12 @@
           </div>
           <p class="aviso-estado" role="status" aria-live="polite" data-compartir-aviso></p>
         </div>
+      </div>
+    </section>
 
+    <!-- Móvil y cadena -->
+    <section class="hero" id="movil">
+      <div class="contenedor hero-interior">
         <div class="hero-visual">
           <div class="movil">
             <img src="img/pantalla-5.jpg" alt="Pantalla de cámara de Doope: cuenta atrás de tu turno, la foto de tu amigo para imitar y tu cámara" width="640" height="1368" fetchpriority="high">

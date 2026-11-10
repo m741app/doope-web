@@ -215,3 +215,20 @@ h2 { font-size: clamp(1.9rem, 5.5vw, 3rem); max-width: 18em; }
 .tiendas { display: flex; align-items: center; gap: 8px; }
 .tiendas img { height: 40px; width: auto; }
 .tiendas img:first-child { height: 52px; margin: -6px -8px; }
+
+/* Portada con vídeo de fondo */
+.portada {
+  position: relative; isolation: isolate; overflow: hidden; display: flex; align-items: center;
+  min-height: calc(100svh - 64px); min-height: max(520px, calc(100svh - 64px));
+  background: #0a0a0a url("video/fondo-poster.jpg") center / cover no-repeat; color: #fff;
+}
+.portada-video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: -2; }
+.portada-capa { position: absolute; inset: 0; z-index: -1; background: linear-gradient(90deg, rgba(0,0,0,0.72) 0%, rgba(0,0,0,0.45) 60%, rgba(0,0,0,0.3) 100%); }
+.portada-interior { padding-top: 56px; padding-bottom: 56px; }
+.portada h1 { color: #fff; max-width: 11em; text-shadow: 0 2px 24px rgba(0,0,0,0.35); font-size: clamp(2.75rem, 10vw, 6rem); }
+.portada h1 .verde { color: var(--verde); }
+.portada .boton { background: #fff; color: #0a0a0a; }
+.portada .enlace-flecha { color: #fff; }
+.portada .aviso-estado { color: #fff; }
+@media (prefers-reduced-motion: reduce) { .portada-video { display: none; } }
+@media (min-width: 960px) { .hero-interior { grid-template-columns: 1fr; } .hero-visual { justify-self: center; } }
