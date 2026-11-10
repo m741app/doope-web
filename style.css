@@ -210,3 +210,8 @@ h2 { font-size: clamp(1.9rem, 5.5vw, 3rem); max-width: 18em; }
   html { scroll-behavior: auto; }
   *, *::before, *::after { transition: none !important; animation: none !important; }
 }
+
+/* Insignias de tiendas */
+.tiendas { display: flex; align-items: center; gap: 8px; }
+.tiendas img { height: 40px; width: auto; }
+.tiendas img:first-child { height: 52px; margin: -6px -8px; }
